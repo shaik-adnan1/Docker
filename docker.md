@@ -28,4 +28,22 @@
 ~ Development team setups up and Artifact(instruction on how to install and configure app on the server)
 ~ For this scenario - installation and configuration's done directly on the server's OS
 * Dependency version conflicts... etc...
-  
+
+## `` Deployment process with container ``
+
+- Docker artifact includes everything the app needs
+- Since the configuration is done already by the developer team 
+there is no need to do and extra configuration by the OPS team.
+- less room for errors
+- Devops team - install Docker runtime on the server and run the Docker command to fetch and run the DOCKER Artifacts
+
+## `` VMS vs DOCKER ``
+
+- VMs - have both OS kernel and the application layer
+- Docker - only has the application layer, so running linux images or containers on a windows OS is not possible
+- Docker containers are light weight compared to the VMs
+- it takes only seconds to start a Docker container whereas it usually takes minutes for VMs to start
+
+``` 
+In order to counter that issue Docker desktop was introduced. In Docker desktop, if you have a linux container or an Image, the desktop has a hypervisor layer with a light weight LINUX Distro(Distribution) that enables to have a Linux OS Kernel allowing us to run Linux images/containers on Windows or any other systems.
+```  
