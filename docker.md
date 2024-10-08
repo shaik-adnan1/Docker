@@ -47,3 +47,53 @@ there is no need to do and extra configuration by the OPS team.
 ``` 
 In order to counter that issue Docker desktop was introduced. In Docker desktop, if you have a linux container or an Image, the desktop has a hypervisor layer with a light weight LINUX Distro(Distribution) that enables to have a Linux OS Kernel allowing us to run Linux images/containers on Windows or any other systems.
 ```  
+# Docker Desktop
+
+## Docker Desktop includes 
+
+### Docker Engine
+
+* A server with a long-running Daemon process "dockerd"
+* Manages image and containers
+
+### Docker CLI - Client
+
+* Command Line Interface ("Docker") to interact with Docker server
+* Execute Docker commands to start/stop... containers
+
+### GUI Client etc...
+
+
+# Docker Images vs Docker Containers
+
+### Docker Image
+
+* An Executable application artifact 
+* Includes app source code, but also complete environment configuration
+* Application layer (JS App), Any services needed (node, npm), OS Layer (Linux)
+* Add environment variables, create directories and files etcc...
+file
+ |
+ |__ file 
+ |__ file
+
+### Docker Container
+
+- Actually start the application
+- A running instance of an image
+- We can run multiple containers from an image
+
+# Docker Registry
+
+- A storage and distributions system for Docker Images
+- Official images available for application like Redis, Mongo, Postgres
+- Official images are maintained by software authors or in collaboration with Docker Community
+-  Docker hosts one of the biggest Docker Registry called `Docker Hub`
+
+# Docker commands 
+
+### List of Docker images
+``` docker images ```
+### List of running Containers
+``` docker ps ```
+
