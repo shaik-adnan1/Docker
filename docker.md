@@ -103,10 +103,17 @@ In order to counter that issue Docker desktop was introduced. In Docker desktop,
 
 ### pull an image from docker registry
 
-`docker pull <imageName>`
+`docker pull <imageName>` =>
 `docker pull nginx`
 
 ### for pulling a specific version
 
-`docker pull {name}:{version_tag} = Pull an Image from a registry`
+`docker pull {name}:{version_tag} = Pull an Image from a registry` =>
 `docker pull nginx:1.23`
+
+### Running a docker image without blocking the terminal
+` docker run -d {name} `
+* here -d means "-detach" this will run the container in the background and not block the terminal
+
+### Checking the logs pf a running container running in the background 
+` docker logs {container} `
