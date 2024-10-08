@@ -95,54 +95,54 @@ In order to counter that issue Docker desktop was introduced. In Docker desktop,
 
 ### `List of Docker images`
 
-`docker images`
+* `docker images`
 
 ### `List of running Containers`
 
-`docker ps`
+* `docker ps`
 
 ### `pull an image from docker registry`
 
-`docker pull <imageName>` =>
-`docker pull nginx`
+* `docker pull <imageName>` =>
+* `docker pull nginx`
 
-### `for pulling a specific version`
+### `For pulling a specific version`
 
-`docker pull {name}:{version_tag} = Pull an Image from a registry` =>
-`docker pull nginx:1.23`
+* `docker pull {name}:{version_tag} = Pull an Image from a registry` =>
+* `docker pull nginx:1.23`
 
 ### `Running a docker image without blocking the terminal`
 
-`docker run -d {name}`
+* `docker run -d {name}`
 
 - here -d means "-detach" this will run the container in the background and not block the terminal
 
 ### `Checking the logs pf a running container running in the background `
 
-`docker logs {container}`
+* `docker logs {container}`
 
 ### `Port binding command`
 
-` docker -d -p {HOST_PORT}:{CONTAINER_PORT} nginx`
-` docker -d -p {9000}:{80} nginx`
+* ` docker -d -p {HOST_PORT}:{CONTAINER_PORT} nginx`
+* ` docker -d -p {9000}:{80} nginx`
 
 ### `Lists all containers (stopped and running)`
 
-`docker ps -a` = -a means --all
+* `docker ps -a` = -a means --all
 
 ### `Starting/Stopping an existing or new container`
 
-`docker start {CONTAINER_NAME}`
-`docker start 6bfdf9c095f3`
+* `docker start {CONTAINER_NAME}`
+* `docker start 6bfdf9c095f3`
 
-`docker start {CONTAINER_NAME}`
-`docker start 6bfdf9c095f3`
+* `docker start {CONTAINER_NAME}`
+* `docker start 6bfdf9c095f3`
 
 - you can get the container name from the `docker ps -a` command
 
 ### `Naming a container`
 
-`docker run --name web-app -d 8 -p 080:80 nginx`
+* `docker run --name web-app -d 8 -p 080:80 nginx`
 
 # `Port Binding`
 
@@ -153,8 +153,8 @@ In order to counter that issue Docker desktop was introduced. In Docker desktop,
 
 ### `Port binding command`
 
-` docker -d -p {HOST_PORT}:{CONTAINER_PORT} nginx`
-` docker -d -p {9000}:{80} nginx`
+* ` docker -d -p {HOST_PORT}:{CONTAINER_PORT} nginx`
+* ` docker -d -p {9000}:{80} nginx`
 
 # `Registry vs Repository`
 
