@@ -93,27 +93,81 @@ In order to counter that issue Docker desktop was introduced. In Docker desktop,
 
 # `Docker commands `
 
-### List of Docker images
+### `List of Docker images`
 
 `docker images`
 
-### List of running Containers
+### `List of running Containers`
 
 `docker ps`
 
-### pull an image from docker registry
+### `pull an image from docker registry`
 
 `docker pull <imageName>` =>
 `docker pull nginx`
 
-### for pulling a specific version
+### `for pulling a specific version`
 
 `docker pull {name}:{version_tag} = Pull an Image from a registry` =>
 `docker pull nginx:1.23`
 
-### Running a docker image without blocking the terminal
-` docker run -d {name} `
-* here -d means "-detach" this will run the container in the background and not block the terminal
+### `Running a docker image without blocking the terminal`
 
-### Checking the logs pf a running container running in the background 
-` docker logs {container} `
+`docker run -d {name}`
+
+- here -d means "-detach" this will run the container in the background and not block the terminal
+
+### `Checking the logs pf a running container running in the background `
+
+`docker logs {container}`
+
+### `Port binding command`
+
+` docker -d -p {HOST_PORT}:{CONTAINER_PORT} nginx`
+` docker -d -p {9000}:{80} nginx`
+
+### `Lists all containers (stopped and running)`
+
+`docker ps -a` = -a means --all
+
+### `Starting/Stopping an existing or new container`
+
+`docker start {CONTAINER_NAME}`
+`docker start 6bfdf9c095f3`
+
+`docker start {CONTAINER_NAME}`
+`docker start 6bfdf9c095f3`
+
+- you can get the container name from the `docker ps -a` command
+
+### `Naming a container`
+
+`docker run --name web-app -d 8 -p 080:80 nginx`
+
+# `Port Binding`
+
+- Application inside a docker container runs in an isolated Docker network
+- So we need to expose the container port to the host (the machine the container runs on)
+- `PORT BINDING: Bind the container's port to the host's port to make the service available to the outside world`
+- This allows us to run the same app running on the same port multiple times
+
+### `Port binding command`
+
+` docker -d -p {HOST_PORT}:{CONTAINER_PORT} nginx`
+` docker -d -p {9000}:{80} nginx`
+
+# `Registry vs Repository`
+
+### `Docker Registry`
+
+- A service providing storage
+- Collection of repositories
+
+### `Docker Repository`
+
+- Collection of related images with same name but different versions
+
+```
+- Same way Docker hub is a registry that stores images
+- On docker hub you can host private or public repositories for your applications
+```
