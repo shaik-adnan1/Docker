@@ -201,3 +201,32 @@ docker -d -p {9000}:{80} nginx
 - Same way Docker hub is a registry that stores images
 - On docker hub you can host private or public repositories for your applications
 ```
+
+# `Structure of Dockerfile`
+
+* Dockerfiles start from a parent image or "base image
+* It's a Docker image that your image is based on
+* You choose the base image, depending on which tools you need to have available
+
+-------
+```
+FROM node:19-alpine
+
+// FROM
+// - Dockerfiles must begin with a FROM instruction
+// - and the next key-word is an image - so the build happens based on this image
+
+// RUN
+// - Will execute any command in a shell inside the container environment
+
+// COPY
+// - Copy application files or directories <src> and adds them to the filesystem of the container at the path <dest>
+// - While "RUN" is executed in the container "COPY" is executed on the host
+
+```
+
+# Building docker image from Dokcerfile
+
+` docker build -t {image_name}:{version} {location_of_dockerfile}`
+
+` docker build -t node-app:1.0 . `
